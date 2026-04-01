@@ -106,14 +106,14 @@ const PrinciplesTab = () => {
   const items = principles[mode];
   return (
     <div style={{ flex:1, display:"flex", flexDirection:"column", padding:"20px 24px", overflow:"auto", maxWidth:700, margin:"0 auto", width:"100%" }}>
-      <h2 style={{ color:"#fff", fontSize:22, fontWeight:700, textAlign:"center", marginBottom:16 }}>Principles</h2>
+      <h2 style={{ color:"#fff", fontSize:44, fontWeight:700, textAlign:"center", marginBottom:16 }}>Principles</h2>
       <div style={{ display:"flex", gap:0, marginBottom:24, borderRadius:8, overflow:"hidden", border:"1px solid #444" }}>
         <button onClick={() => { setMode("attacking"); setOpenIdx(null); }}
-          style={{ flex:1, padding:"10px 0", border:"none", cursor:"pointer", fontSize:14, fontWeight:700, background: mode==="attacking"?"#2d6a1e":"#333", color: mode==="attacking"?"#fff":"#999" }}>
+          style={{ flex:1, padding:"10px 0", border:"none", cursor:"pointer", fontSize:28, fontWeight:700, background: mode==="attacking"?"#2d6a1e":"#333", color: mode==="attacking"?"#fff":"#999" }}>
           Attacking
         </button>
         <button onClick={() => { setMode("defending"); setOpenIdx(null); }}
-          style={{ flex:1, padding:"10px 0", border:"none", cursor:"pointer", fontSize:14, fontWeight:700, background: mode==="defending"?"#8b1a1a":"#333", color: mode==="defending"?"#fff":"#999" }}>
+          style={{ flex:1, padding:"10px 0", border:"none", cursor:"pointer", fontSize:28, fontWeight:700, background: mode==="defending"?"#8b1a1a":"#333", color: mode==="defending"?"#fff":"#999" }}>
           Defending
         </button>
       </div>
@@ -122,11 +122,11 @@ const PrinciplesTab = () => {
           <div key={i} style={{ background: openIdx===i?"rgba(255,255,255,0.08)":"rgba(255,255,255,0.03)", border:"1px solid", borderColor: openIdx===i?(mode==="attacking"?"#4a9e2f":"#c0392b"):"#333", borderRadius:8, overflow:"hidden" }}>
             <button onClick={() => setOpenIdx(openIdx===i?null:i)}
               style={{ width:"100%", textAlign:"left", padding:"14px 18px", border:"none", cursor:"pointer", background:"transparent", display:"flex", justifyContent:"space-between", alignItems:"center" }}>
-              <span style={{ color:"#fff", fontSize:17, fontWeight:700 }}>{item.title}</span>
-              <span style={{ color:"#888", fontSize:14, marginLeft:12 }}>{openIdx===i?"▲":"▼"}</span>
+              <span style={{ color:"#fff", fontSize:34, fontWeight:700 }}>{item.title}</span>
+              <span style={{ color:"#888", fontSize:28, marginLeft:12 }}>{openIdx===i?"▲":"▼"}</span>
             </button>
             {openIdx===i && (
-              <div style={{ padding:"0 18px 16px", color:"#ccc", fontSize:14, lineHeight:1.6 }}>{item.desc}</div>
+              <div style={{ padding:"0 18px 16px", color:"#ccc", fontSize:28, lineHeight:1.6 }}>{item.desc}</div>
             )}
           </div>
         ))}
