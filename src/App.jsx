@@ -7,11 +7,6 @@ const BALL_R = 10;
 const initialBall = { x: 330, y: 320, attachedTo: null };
 
 const videoLibrary = [
-  { category: "1-2s", clips: [
-    { url: "https://www.youtube.com/embed/StrVREfJCLA?start=294", note: "Cork are slow to press, but what happens to the centre back when the forward passes the ball", tag: "Mayo vs Cork (Seniors)" },
-    { url: "https://www.youtube.com/embed/3We4g2F_qpo?start=1380", note: "Great width in build up with purposeful runs, watch the defender naturally follow the ball", tag: "Dublin vs Kildare (Minors)" },
-    { url: "https://www.youtube.com/embed/7PgsWo2-l9U?start=246", note: "Great out in front run to start the play, watch how the defenders get caught out with the 1-2", tag: "Donegal vs Galway (Seniors)" },
-  ]},
   { category: "Getting Out of the Running Lane & Creating Space", clips: [
     { url: "https://www.youtube.com/embed/gubrXY3mCW0?start=5819", note: "Great run to get out in front, ball recycles back to the other side. Watch 2 players make small movements away from the runner", tag: "Dublin vs Cork (Seniors)" },
     { url: "https://www.youtube.com/embed/7PgsWo2-l9U?start=518", note: "Plenty of options in front throughout the attack, players make sure they are slightly to the left or right, rather than straight in front of", tag: "Donegal vs Galway (Seniors)" },
@@ -22,6 +17,11 @@ const videoLibrary = [
     { url: "https://www.youtube.com/embed/gubrXY3mCW0?start=2858", note: "Forward run creates the passing option, great pass inside and easy score", tag: "Dublin vs Cork (Seniors)" },
     { url: "https://www.youtube.com/embed/gubrXY3mCW0?start=5684", note: "Brilliant run to the side creates the passing option, cut back inside for easy score", tag: "Dublin vs Cork (Seniors)" },
     { url: "https://www.youtube.com/embed/gubrXY3mCW0?start=5765", note: "Great run out in front, but… no 1-2 option, players in same running lane = no easy shot, and play breaks down", tag: "Dublin vs Cork (Seniors)" },
+  ]},
+  { category: "1-2s", clips: [
+    { url: "https://www.youtube.com/embed/StrVREfJCLA?start=294", note: "Cork are slow to press, but what happens to the centre back when the forward passes the ball", tag: "Mayo vs Cork (Seniors)" },
+    { url: "https://www.youtube.com/embed/3We4g2F_qpo?start=1380", note: "Great width in build up with purposeful runs, watch the defender naturally follow the ball", tag: "Dublin vs Kildare (Minors)" },
+    { url: "https://www.youtube.com/embed/7PgsWo2-l9U?start=246", note: "Great out in front run to start the play, watch how the defenders get caught out with the 1-2", tag: "Donegal vs Galway (Seniors)" },
   ]},
 ];
 
@@ -150,7 +150,7 @@ const VideoLibrarySidebar = ({ open, setOpen, onExpand }) => {
   return (
     <div style={{ width: open?300:0, minWidth: open?300:0, transition:"all 0.3s", background:"#12122a", borderLeft: open?"1px solid #333":"none", overflow:"hidden", display:"flex", flexDirection:"column", height:"100vh" }}>
       <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between", padding:"12px 14px", borderBottom:"1px solid #2a2a4a" }}>
-        <span style={{ color:"#fff", fontWeight:700, fontSize:15 }}>Tactical Movement</span>
+        <span style={{ color:"#fff", fontWeight:700, fontSize:14, lineHeight:1.3 }}>Tactical Movement<br/><span style={{ fontWeight:400, fontSize:12, color:"#999" }}>video library</span></span>
         <button onClick={() => setOpen(false)} style={{ background:"none", border:"none", color:"#888", cursor:"pointer", fontSize:18 }}>✕</button>
       </div>
       <div style={{ flex:1, overflowY:"auto", padding:"6px 0" }}>
